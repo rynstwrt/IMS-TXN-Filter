@@ -20,14 +20,14 @@ body
 
 header
 {
-    margin: 30px 0 25px 0;
+    margin: 30px 0 30px 0;
     border-bottom: 2px solid #FFA987;
 }
 
 header > h3
 {
     font-family: "Comfortaa", cursive;
-    font-size: 2rem;
+    font-size: 1.5rem;
     letter-spacing: 1px;
 }
 
@@ -35,12 +35,16 @@ header > h3
 {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 #types > label
 {
     font-weight: 600;
-    margin-bottom: 5px;
+    margin-bottom: 7px;
+    letter-spacing: 2px;
+    width: 70%;
+    text-align: center;
 }
 
 #types > select
@@ -51,20 +55,27 @@ header > h3
     font-size: .85rem;
     width: 250px;
     margin: 0 auto;
+    border: none;
 }
 
 #types > select > option
 {
-    border-bottom: 1px solid black;
-    padding: 3px 0;
+    border-bottom: 1px solid #111e26;
+    padding: 5px 0;
     text-align: center;
+    letter-spacing: 1px;
+    font-size: .8rem;
+}
+
+#types > select > option:last-of-type
+{
+    border-bottom: 0;
 }
 
 #buttons
 {
     margin-top: 30px;
     padding-bottom: 20px;
-    font-style: inherit;
 }
 
 #buttons > input[type="button"]
@@ -74,9 +85,12 @@ header > h3
     outline: none;
     background-color: #2C4251;
     padding: 10px 20px;
-    font-style: inherit;
-    font-weight: 600;
     border-radius: 20px;
+    text-transform: inherit;
+    text-align: center;
+    font-family: inherit;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
 #buttons > input[type="button"]:hover
