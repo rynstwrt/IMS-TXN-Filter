@@ -8,6 +8,11 @@
     "icons": {
         "48": "images/icon.jpg"
     },
+    "browser_action": {
+        "default_icon": "images/icon.jpg",
+        "default_title": "IMS TXN Filter",
+        "default_popup": "popup/popup.html"
+    },
     "content_scripts": [
         {
             "matches": ["*://internal.softlayer.com/HardwareTransaction/currentTransactionsByDatacenter/*"],
@@ -15,10 +20,9 @@
             "run_at": "document_end"
         }
     ],
-    "browser_action": {
-        "default_icon": "images/icon.jpg",
-        "default_title": "IMS TXN Filter",
-        "default_popup": "popup/popup.html"
+    "background": {
+        "scripts": ["/js/background.js"],
+        "persistent": false
     },
     "permissions": ["activeTab"]
 }

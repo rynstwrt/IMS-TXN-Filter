@@ -1,20 +1,10 @@
-const filterButton = document.getElementById("filter-button");
-const typeSelect = document.getElementById("types-select");
-
-// Listen for clicks of the buttons and send a message to the content scripts.
-function listenForClicks()
+document.addEventListener("DOMContentLoaded", () =>
 {
-    document.addEventListener("click", e =>
+    document.querySelector("#filter-button").addEventListener("click", () =>
     {
-        console.log(e);
-    });
-}
+        const select = document.querySelector("#types-select");
+        const selected = Array.from(select.selectedOptions).map(({ value }) => value);
 
-// when popup loads, inject a content script into the
-// active tab and add a click handler.
-browser.tabs.executeScript({})
-    .then(listenForClicks)
-    .catch(err =>
-    {
-        console.error(err);
+        browser.runtime.sendMessage({selected: selected});
     });
+});
