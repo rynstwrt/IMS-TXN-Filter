@@ -9,13 +9,14 @@
 // MS Cloud Provision
 // RH Reload
 // Reclaim
+// Service Setup
 // Storage Provision
 // UBU Reload
 // XenServer HV Reload
 
 const validTXNTypes = ["Cloud Instance Reclaim", "Cloud Instance Reload", "Cloud Migrate",
     "Cloud Provision", "Create Cloud Disk Checksum", "Export Image COS", "Import Image COS",
-    "Juniper Reload", "MS Cloud Provision", "RH Reload", "Reclaim", "Storage Provision",
+    "Juniper Reload", "MS Cloud Provision", "RH Reload", "Reclaim", "Service Setup", "Storage Provision",
     "UBU Reload", "XenServer HV Reload"];
 
 (() =>
