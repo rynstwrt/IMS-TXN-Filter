@@ -4,6 +4,9 @@ browser.runtime.onMessage.addListener((msg, sender, sendRes) =>
         .then(tabInfo =>
         {
             const [{id: tabID}] = tabInfo;
-            browser.tabs.sendMessage(tabID, {selected: msg.selected})
+            browser.tabs.insertCSS(tabID, {code: ".hidden {display: none;}"}).then(() =>
+            {
+                browser.tabs.sendMessage(tabID, {selected: msg.selected})
+            });
         });
 });

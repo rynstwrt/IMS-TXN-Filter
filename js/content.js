@@ -5,11 +5,11 @@ const validTXNTypes = ["Cloud Instance Reclaim", "Cloud Instance Reload", "Cloud
 browser.runtime.onMessage.addListener(message =>
 {
     const selected = message.selected;
+    console.log(selected);
 
     const tableRows = document.querySelectorAll("#layoutContentBody tbody tr");
 
-    for (let i = 0; i < tableRows.length; ++i)
-    {
+    for (let i = 0; i < tableRows.length; ++i) {
         const row = tableRows[i];
 
         const transactionTypeTD = row.children[5];
@@ -20,12 +20,11 @@ browser.runtime.onMessage.addListener(message =>
 
         if (selected.includes("Select All") || selected.includes(type))
         {
-            // row.style.display = "inherit";
+            row.classList.remove("hidden");
         }
         else
         {
-            // row.style.display = "none";
-            
+            row.classList.add("hidden");
         }
     }
 
