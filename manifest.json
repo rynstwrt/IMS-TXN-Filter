@@ -6,10 +6,10 @@
     "description": "Filter types of transactions in IMS!",
     "homepage_url": "https://github.com/rynstwrt/IMS-TXN-Filter",
     "icons": {
-        "48": "images/icon.jpg"
+        "48": "images/icon.png"
     },
     "browser_action": {
-        "default_icon": "images/icon.jpg",
+        "default_icon": "images/icon.png",
         "default_title": "IMS TXN Filter",
         "default_popup": "popup/popup.html"
     },
