@@ -12,6 +12,11 @@
         "default_title": "IMS TXN Filter",
         "default_popup": "popup/popup.html"
     },
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "imstxnfilter@ryanstew.art"
+        }
+    },
     "content_scripts": [
         {
             "matches": ["*://internal.softlayer.com/HardwareTransaction/currentTransactionsByDatacenter/*"],
@@ -23,5 +28,5 @@
         "scripts": ["/js/background.js"],
         "persistent": false
     },
-    "permissions": ["activeTab"]
+    "permissions": ["activeTab", "storage"]
 }

@@ -48,4 +48,9 @@ const validTXNTypes = ["Cloud Instance Reclaim", "Cloud Instance Reload", "Cloud
     {
         filterTXNs(message.selected);
     });
+
+    browser.storage.sync.get("selected").then(res =>
+    {
+        filterTXNs(res.selected);
+    });
 })();
