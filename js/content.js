@@ -18,13 +18,14 @@ browser.runtime.onMessage.addListener(message =>
         const type = transactionTypeTD.textContent.trim();
         if (!validTXNTypes.includes(type)) continue;
 
-        if (selected.includes(type))
+        if (selected.includes("Select All") || selected.includes(type))
         {
-            row.style.transform = "initial";
+            // row.style.display = "inherit";
         }
         else
         {
-            row.style.display = "none";
+            // row.style.display = "none";
+            
         }
     }
 
