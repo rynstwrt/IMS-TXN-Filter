@@ -1,0 +1,104 @@
+$bg-color: #2C4251;
+$bg-color-darker: #1c2f3b;
+//$accent-color: #ffa34d;
+$accent-color: #f39641;
+
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body
+{
+    font-family: "Open Sans", sans-serif;
+    margin: 0 45px;
+    background-color: $bg-color;
+    color: $accent-color;
+    font-weight: 500;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+header
+{
+    margin: 30px 0 30px 0;
+
+    h3
+    {
+        font-family: "Rubik Wet Paint", cursive;
+        font-size: 2.1rem;
+        letter-spacing: 4px;
+    }
+}
+
+#types
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    label
+    {
+        font-weight: 600;
+        margin-bottom: 7px;
+        letter-spacing: 2px;
+        width: 90%;
+        text-align: center;
+        font-size: .9rem;
+    }
+
+    select
+    {
+        background-color: $bg-color-darker;
+        font: inherit;
+        color: inherit;
+        font-size: .85rem;
+        width: 250px;
+        margin: 0 auto;
+        border: none;
+
+        option
+        {
+            border-bottom: 1px solid $bg-color-darker;
+            padding: 5px 0;
+            text-align: center;
+            letter-spacing: 1px;
+            font-size: .8rem;
+
+            &:last-of-type
+            {
+                border-bottom: none;
+            }
+        }
+    }
+}
+
+#buttons
+{
+    margin-top: 30px;
+    padding-bottom: 20px;
+
+    input[type="button"]
+    {
+        border: 2px solid $accent-color;
+        color: inherit;
+        outline: none;
+        background-color: $bg-color;
+        padding: 10px 20px;
+        border-radius: 20px;
+        text-transform: inherit;
+        text-align: center;
+        font-family: inherit;
+        font-weight: 600;
+        letter-spacing: 1px;
+
+        &:hover
+        {
+            background-color: $bg-color-darker;
+        }
+    }
+}

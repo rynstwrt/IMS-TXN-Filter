@@ -1,99 +1,82 @@
-*
-{
-    box-sizing: border-box;
-    margin: 0;
+* {
+  box-sizing: border-box;
+  margin: 0;
 }
 
-body
-{
-    font-family: "Open Sans", sans-serif;
-    margin: 0 45px;
-    background-color: #2C4251;
-    color: #FFA987;
-    font-weight: 500;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-transform: uppercase;
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0 45px;
+  background-color: #2C4251;
+  color: #f39641;
+  font-weight: 500;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-transform: uppercase;
 }
 
-header
-{
-    margin: 30px 0 30px 0;
-    border-bottom: 2px solid #FFA987;
+header {
+  margin: 30px 0 30px 0;
+}
+header h3 {
+  font-family: "Rubik Wet Paint", cursive;
+  font-size: 2.1rem;
+  letter-spacing: 4px;
 }
 
-header > h3
-{
-    font-family: "Comfortaa", cursive;
-    font-size: 1.5rem;
-    letter-spacing: 1px;
+#types {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#types label {
+  font-weight: 600;
+  margin-bottom: 7px;
+  letter-spacing: 2px;
+  width: 90%;
+  text-align: center;
+  font-size: 0.9rem;
+}
+#types select {
+  background-color: #1c2f3b;
+  font: inherit;
+  color: inherit;
+  font-size: 0.85rem;
+  width: 250px;
+  margin: 0 auto;
+  border: none;
+}
+#types select option {
+  border-bottom: 1px solid #1c2f3b;
+  padding: 5px 0;
+  text-align: center;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+}
+#types select option:last-of-type {
+  border-bottom: none;
 }
 
-#types
-{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+#buttons {
+  margin-top: 30px;
+  padding-bottom: 20px;
+}
+#buttons input[type=button] {
+  border: 2px solid #f39641;
+  color: inherit;
+  outline: none;
+  background-color: #2C4251;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-transform: inherit;
+  text-align: center;
+  font-family: inherit;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+#buttons input[type=button]:hover {
+  background-color: #1c2f3b;
 }
 
-#types > label
-{
-    font-weight: 600;
-    margin-bottom: 7px;
-    letter-spacing: 2px;
-    width: 70%;
-    text-align: center;
-}
-
-#types > select
-{
-    background-color: #1c2f3b;
-    font: inherit;
-    color: inherit;
-    font-size: .85rem;
-    width: 250px;
-    margin: 0 auto;
-    border: none;
-}
-
-#types > select > option
-{
-    border-bottom: 1px solid #111e26;
-    padding: 5px 0;
-    text-align: center;
-    letter-spacing: 1px;
-    font-size: .8rem;
-}
-
-#types > select > option:last-of-type
-{
-    border-bottom: 0;
-}
-
-#buttons
-{
-    margin-top: 30px;
-    padding-bottom: 20px;
-}
-
-#buttons > input[type="button"]
-{
-    border: 2px solid #FFA987;
-    color: inherit;
-    outline: none;
-    background-color: #2C4251;
-    padding: 10px 20px;
-    border-radius: 20px;
-    text-transform: inherit;
-    text-align: center;
-    font-family: inherit;
-    font-weight: 600;
-    letter-spacing: 1px;
-}
-
-#buttons > input[type="button"]:hover
-{
-    background-color: #1c2f3b;
-}
+/*# sourceMappingURL=popup.css.map */
