@@ -3,22 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <title>IMS TXN Filter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;600;800&family=Comfortaa:wght@700&display=swap"  rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="popup.css">
 </head>
 <body>
-    <select name="types-select" id="types-select" multiple>
-        <option value="CIR">Cloud Instance Reload</option>
-        <option value="CM">Cloud Migrate</option>
-        <option value="CP">Cloud Provision</option>
-        <option value="CCDC">Create Cloud Disk Checksum</option>
-        <option value="EICOS">Export Image COS</option>
-        <option value="IICOS">Import Image COS</option>
-        <option value="MSCP">MS Cloud Provision</option>
-        <option value="RHR">RH Reload</option>
-        <option value="R">Reclaim</option>
-        <option value="UBUR">UBU Reload</option>
-        <option value="XHVR">XenServer HV Reload</option>
-    </select>
-    <script src="js/popup.js"></script>
+    <header>
+        <h3>IMS TXN FILTER</h3>
+    </header>
+
+    <div id="types">
+        <label for="types-select">Select the TXN Types to Hide:</label>
+        <select name="types-select" id="types-select" multiple size="12">
+            <option value="none">&lt;None&gt;</option>
+            <option value="CIR">Cloud Instance Reload</option>
+            <option value="CM">Cloud Migrate</option>
+            <option value="CP">Cloud Provision</option>
+            <option value="CCDC">Create Cloud Disk Checksum</option>
+            <option value="EICOS">Export Image COS</option>
+            <option value="IICOS">Import Image COS</option>
+            <option value="MSCP">MS Cloud Provision</option>
+            <option value="RHR">RH Reload</option>
+            <option value="R">Reclaim</option>
+            <option value="UBUR">UBU Reload</option>
+            <option value="XHVR">XenServer HV Reload</option>
+        </select>
+    </div>
+
+    <div id="buttons">
+        <input id="filter-button" type="button" value="Filter">
+    </div>
+
+    <script src="popup.js"></script>
 </body>
 </html>
