@@ -23,6 +23,13 @@ header h3 {
   font-family: "Rubik Wet Paint", cursive;
   font-size: 2.1rem;
   letter-spacing: 4px;
+  -webkit-text-stroke: 1px black;
+}
+
+label {
+  letter-spacing: 1px;
+  text-align: center;
+  font-size: 0.9rem;
 }
 
 #types {
@@ -33,10 +40,7 @@ header h3 {
 #types label {
   font-weight: 600;
   margin-bottom: 7px;
-  letter-spacing: 2px;
   width: 90%;
-  text-align: center;
-  font-size: 0.9rem;
 }
 #types select {
   background-color: #1c2f3b;
@@ -56,6 +60,36 @@ header h3 {
 }
 #types select option:last-of-type {
   border-bottom: none;
+}
+
+#reload-keep {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+#reload-keep #reload-keep-box {
+  margin-left: 10px;
+  appearance: none;
+  background-color: #1c2f3b;
+  font: inherit;
+  width: 1em;
+  height: 1em;
+  border: 1px solid #f39641;
+  border-radius: 0.2em;
+  transform: translateY(0.05em);
+  display: grid;
+  place-content: center;
+}
+#reload-keep #reload-keep-box::before {
+  content: "";
+  width: 0.6em;
+  height: 0.6em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em #f39641;
+}
+#reload-keep #reload-keep-box:checked::before {
+  transform: scale(1);
 }
 
 #buttons {

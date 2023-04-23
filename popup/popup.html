@@ -13,7 +13,7 @@
     </header>
 
     <div id="types">
-        <label for="types-select">Select the TXN Types to Show:</label>
+        <label for="types-select">Transaction Types to Show:</label>
         <select name="types-select" id="types-select" multiple size="7">
             <option value="Select All">&lt;Select All&gt;</option>
             <option value="Cloud Instance Reclaim">Cloud Instance Reclaim</option>
@@ -32,6 +32,11 @@
             <option value="UBU Reload">UBU Reload</option>
             <option value="XenServer HV Reload">XenServer HV Reload</option>
         </select>
+    </div>
+
+    <div id="reload-keep">
+        <label for="reload-keep-box">Keep filters on reload?:</label>
+        <input id="reload-keep-box" name="reload-keep-box" type="checkbox" checked>
     </div>
 
     <div id="buttons">
